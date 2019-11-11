@@ -41,6 +41,7 @@
     justify-content: flex-end;
 }
 .menu-item a {
+    font-family: 'Noto Serif', serif;
     font-size: 14px;
     color: #000;
     transition: all .3s ease-in;
@@ -64,4 +65,10 @@
 footer {
     border-top: 1px solid #E0E0E0;
     margin: 0;
+}
+.title-post {
+    font-family: 'Noto Serif', serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: capitalize;
 }

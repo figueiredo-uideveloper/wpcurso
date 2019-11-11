@@ -16,6 +16,13 @@ function load_scripts() {
         'all'
     );
     wp_enqueue_style(
+        'Noto-Serif-Font',
+        'https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap',
+        array(),
+        '',
+        'all'
+    );
+    wp_enqueue_style(
         'bootstrap-css',
         'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css',
         array(),
