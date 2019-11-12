@@ -4,13 +4,15 @@
     <main>
         <section class="slide">
             <div class="container">
-                <div class="row">Slide</div>
+                <div class="row">
+                    <div class="col-12">Slide</div>
+                </div>
             </div>
         </section>
         <section class="services">
             <div class="container">
                 <div class="row">
-                    Serviços
+                    <div class="col-12">Serviços</div>
                 </div>
             </div>
         </section>
