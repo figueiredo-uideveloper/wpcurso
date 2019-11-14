@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<img class="img-fluid" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>">
 
 <div class="content-area">
     <main>
@@ -32,6 +33,7 @@
 
                                 <article>
                                     <h2 class="title-post"><?php the_title(); ?></h2>
+                                    <?php the_post_thumbnail(); ?>
                                     <p>Published in <?php echo get_the_date(); ?> by <?php the_author_posts_link(); ?></p>
                                     <p>Categories: <?php the_category(' '); ?></p>
                                     <p><?php the_tags('Tags: ', ', '); ?></p>
