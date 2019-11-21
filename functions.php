@@ -65,17 +65,3 @@ function wpcurso_config() {
     add_theme_support('post-formats', array('video', 'image'));
 }
 add_action('after_setup_theme', 'wpcurso_config', 0);
-
-
-// function create_my_post_type(){
-//     register_post_type(
-//         'my_custom_post_type',
-//         array(
-//             'labels' => array('name' => __('Products')),
-//             'public' => true,
-//             'supports' => array('title', 'editor', 'thumbnail')
-//         )
-//     );
-// }
-// add_action('init', 'create_my_post_type');
-// add_post_type_support( 'my_custom_post_type', 'post-formats' );
