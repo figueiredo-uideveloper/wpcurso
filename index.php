@@ -3,28 +3,9 @@
 
 <div class="content-area">
     <main>
-        <section class="slide">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        Slide
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        Serviços
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="meddle-area">
             <div class="container">
                 <div class="row">
-                    <aside class="sidebar col-md-4">Sidebar</aside>
                     <div class="news col-md-8">
                         <?php
                         if (have_posts()) :
@@ -44,10 +25,11 @@
                         endif;
                         ?>
                     </div>
+                    
+                    <?php get_sidebar('blog'); ?>
                 </div>
             </div>
         </section>
-        <section class="map"></section>
     </main>
 </div>
 
