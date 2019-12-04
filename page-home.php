@@ -48,23 +48,20 @@
                 <div class="row">
                     <?php get_sidebar('home'); ?>
                     <div class="news col-md-8">
-                        <?php
-                        if (have_posts()) :
-                            while (have_posts()) : the_post();
+                        <div class="container">
+                            <div class="row">
+                                <?php
+                                    $featured = new WP_Query('post_typ=post&posts_per_page=1&cat=1');
+
+                                    if($featured->have_posts()):
+                                        while($featured->have_posts()):
+                                            $featured->the_post();
+                                        endwhile;
+                                        wp_reset_postdata();
+                                    endif;
                                 ?>
-
-                                <p>pagina home</p>
-
-                            <?php
-                                endwhile;
-                            else :
-                                ?>
-
-                            <p>There's nothing yet to be displayed...</p>
-
-                        <?php
-                        endif;
-                        ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
