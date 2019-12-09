@@ -28,7 +28,9 @@
                         </div>
                     </div>                
                     <div class="col-sm-6 text-right">
-                        <div class="search"><input type="text" name="" id="" placeholder="Search"></div>
+                        <div class="search">
+                            <?php get_search_form(); ?>
+                        </div>
                     </div>
                 </div>
             </div>
