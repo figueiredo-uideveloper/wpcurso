@@ -8,6 +8,9 @@
                         );
                     ?>
                 </div>
+                <div class="copyright">
+                    <p><?php echo get_theme_mod('set_copyright'); ?></p>
+                </div>
             </div>
         </div>
     </footer>

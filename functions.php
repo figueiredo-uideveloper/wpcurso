@@ -1,4 +1,6 @@
 <?php
+require get_template_directory() . '/inc/customizer.php';
+
 
 function load_scripts() {
     wp_enqueue_script(
