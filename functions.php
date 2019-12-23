@@ -67,6 +67,11 @@ function wpcurso_config() {
     add_theme_support('post-formats', array('video', 'image'));
     add_theme_support('title-tag');
     add_theme_support('custom-logo', array('height' => 33, 'width' => 111));
+
+    // Habilitando suporte à tradução
+    $textdomain = 'wpcurso';
+    load_theme_textdomain($textdomain, get_stylesheet_directory() . '/languages/');
+    load_theme_textdomain($textdomain, get_template_directory() . '/languages/');
 }
 add_action('after_setup_theme', 'wpcurso_config', 0);
 
