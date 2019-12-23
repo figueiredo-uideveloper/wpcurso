@@ -66,6 +66,7 @@ function wpcurso_config() {
     set_post_thumbnail_size(300, 220, true);
     add_theme_support('post-formats', array('video', 'image'));
     add_theme_support('title-tag');
+    add_theme_support('custom-logo', array('height' => 33, 'width' => 111));
 }
 add_action('after_setup_theme', 'wpcurso_config', 0);
 

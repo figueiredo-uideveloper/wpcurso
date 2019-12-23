@@ -36,9 +36,9 @@
         </section>
         <section class="menu-area">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <section class="logo">UiCode</section>
+                <div class="row d-flex align-items-center">
+                    <div class="col-sm-3 text-center">
+                        <?php the_custom_logo(); ?>
                     </div>
                     <div class="col-sm-9 menu-wrapper">
                         <nav>
