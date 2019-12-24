@@ -48,6 +48,13 @@ function load_scripts() {
         '1.0',
         'all'
     );
+    wp_enqueue_script(
+        'fitvids',
+        get_template_directory_uri() . '/js/fitvids.js',
+        array('jquery'),
+        null,
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
 
@@ -75,6 +82,9 @@ function wpcurso_config() {
     $textdomain = 'wpcurso';
     load_theme_textdomain($textdomain, get_stylesheet_directory() . '/languages/');
     load_theme_textdomain($textdomain, get_template_directory() . '/languages/');
+
+    // Suporte ao Gutenberg
+    add_theme_support('align-wide');
 }
 add_action('after_setup_theme', 'wpcurso_config', 0);
 

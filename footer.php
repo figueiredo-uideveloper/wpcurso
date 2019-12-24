@@ -15,5 +15,11 @@
         </div>
     </footer>
     <?php wp_footer(); ?>
+    <script>
+        jQuery(document).ready(function($){
+            // Target your .container, .wrapper, .post, etc.
+            $(".is-type-video").fitVids();
+        });
+    </script>
 </body>
 </html> 
