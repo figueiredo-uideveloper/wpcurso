@@ -58,6 +58,18 @@ function load_scripts() {
 }
 add_action('wp_enqueue_scripts', 'load_scripts');
 
+function wpcurso_gutenberg_fonts(){
+    wp_enqueue_style(
+        'Source-Sans-Pro-Font',
+        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:900&display=swap'
+    );
+    wp_enqueue_style(
+        'Noto-Serif-Font',
+        'https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap'
+    );
+}
+add_action('enqueue_block_editor_assets', 'wpcurso_gutenberg_fonts');
+
 function wpcurso_config() {
     register_nav_menus(
         array(
@@ -85,6 +97,27 @@ function wpcurso_config() {
 
     // Suporte ao Gutenberg
     add_theme_support('align-wide');
+    add_theme_support('editor-color-palette', array(
+        array(
+            'name' => 'Blood Red',
+            'slug' => 'blood-red',
+            'color' => '#b9121b'
+        ),
+        array(
+            'name' => 'White',
+            'slug' => 'white',
+            'color' => '#ffffff'
+        ),
+        array(
+            'name' => 'Black',
+            'slug' => 'black',
+            'color' => '#000000'
+        )
+    ));
+    add_theme_support('disable-custom-colors');
+    add_theme_support('editor-styles');
+    add_editor_style('css/style-editor.css');
+    add_theme_support('wp-block-styles');
 }
 add_action('after_setup_theme', 'wpcurso_config', 0);
 
